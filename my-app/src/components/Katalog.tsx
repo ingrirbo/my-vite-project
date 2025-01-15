@@ -1,4 +1,6 @@
 import './Katalog.css';
+import Produktkort from './Produktkort';
+import vase from "../images/produkter/vase.jpg"
 
 export default function Katalog() {
     return (
@@ -7,12 +9,12 @@ export default function Katalog() {
                 <p>filtre kommer her</p>
             </div>
             <div className="grid-container">
-                <div className="grid-item">Item 1</div>
-                <div className="grid-item">Item 2</div>
-                <div className="grid-item">Item 3</div>
-                <div className="grid-item">Item 4</div>
-                <div className="grid-item">Item 5</div>
-                <div className="grid-item">Item 6</div>
+                <Produktkort bildeUrl={vase} produktNavn="Produktnavn" beskrivelse="Beskrivelse av produkt" pris={899} />
+                <Produktkort bildeUrl={vase} produktNavn="Produktnavn" beskrivelse="Beskrivelse av produkt" pris={899} />
+                <Produktkort bildeUrl={vase} produktNavn="Produktnavn" beskrivelse="Beskrivelse av produkt" pris={899} />
+                <Produktkort bildeUrl={vase} produktNavn="Produktnavn" beskrivelse="Beskrivelse av produkt" pris={899} />
+                <Produktkort bildeUrl={vase} produktNavn="Produktnavn" beskrivelse="Beskrivelse av produkt" pris={899} />
+                <Produktkort bildeUrl={vase} produktNavn="Produktnavn" beskrivelse="Beskrivelse av produkt" pris={899} />
             </div>
         </div>
     )

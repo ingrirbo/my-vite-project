@@ -1,20 +1,27 @@
+import { Product } from "../types/products";
 import './Katalog.css';
 import Produktkort from './Produktkort';
-import vase from "../images/produkter/vase.jpg"
 
-export default function Katalog() {
+interface KatalogProps {
+    products: Product[]
+}
+
+export default function Katalog({ products }: KatalogProps) {
+
     return (
         <div className="katalog">
             <div className="filterbar">
                 <p>filtre kommer her</p>
             </div>
             <div className="grid-container">
-                <Produktkort bildeUrl={vase} produktNavn="Produktnavn" beskrivelse="Beskrivelse av produkt" pris={899} />
-                <Produktkort bildeUrl={vase} produktNavn="Produktnavn" beskrivelse="Beskrivelse av produkt" pris={899} />
-                <Produktkort bildeUrl={vase} produktNavn="Produktnavn" beskrivelse="Beskrivelse av produkt" pris={899} />
-                <Produktkort bildeUrl={vase} produktNavn="Produktnavn" beskrivelse="Beskrivelse av produkt" pris={899} />
-                <Produktkort bildeUrl={vase} produktNavn="Produktnavn" beskrivelse="Beskrivelse av produkt" pris={899} />
-                <Produktkort bildeUrl={vase} produktNavn="Produktnavn" beskrivelse="Beskrivelse av produkt" pris={899} />
+                {products.map((product) => (
+                    <Produktkort
+                        bildeUrl={product.image}
+                        produktNavn={product.title}
+                        beskrivelse={product.description}
+                        pris={product.price}
+                    />
+                ))}
             </div>
         </div>
     )

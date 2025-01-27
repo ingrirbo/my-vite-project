@@ -1,13 +1,12 @@
 import { Product } from "../types/products";
-import './Katalog.css';
-import Produktkort from './Produktkort';
+import "./Katalog.css";
+import Produktkort from "./Produktkort";
 
 interface KatalogProps {
-    products: Product[]
+    products: Product[];
 }
 
 export default function Katalog({ products }: KatalogProps) {
-
     return (
         <div className="katalog">
             <div className="filterbar">
@@ -24,5 +23,5 @@ export default function Katalog({ products }: KatalogProps) {
                 ))}
             </div>
         </div>
-    )
+    );
 }

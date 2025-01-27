@@ -15,6 +15,7 @@ export default function Katalog({ products }: KatalogProps) {
             <div className="grid-container">
                 {products.map((product) => (
                     <Produktkort
+                        id={product.id}
                         bildeUrl={product.image}
                         produktNavn={product.title}
                         beskrivelse={product.description}

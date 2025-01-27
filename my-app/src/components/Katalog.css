@@ -22,6 +22,7 @@
     padding: 1em;
     display: flex;
     flex-direction: column;
+    cursor: pointer;
 }
 
 .produktkort img {

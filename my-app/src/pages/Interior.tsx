@@ -13,6 +13,10 @@ export default function Interior() {
             .then((json) => setProducts(json));
     }, []);
 
+    if (!products) {
+        return <p>Spinner her...</p>; // TODO
+    }
+
     return (
         <>
             <img src={logo} className="logo" />

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import Katalog from "../components/Katalog";
-import Navigeringsbanner from "../components/Navigeringsbanner";
-import logo from "../images/logo.jpg";
+import Layout from "../Layout";
 import { Product } from "../types/products";
 
 export default function Interior() {
@@ -18,10 +17,8 @@ export default function Interior() {
     }
 
     return (
-        <>
-            <img src={logo} className="logo" />
-            <Navigeringsbanner />
+        <Layout>
             <Katalog products={products} />
-        </>
+        </Layout>
     );
 }

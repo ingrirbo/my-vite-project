@@ -56,6 +56,7 @@
     justify-content: flex-start;
 }
 
+/*TODO: fiks feil i styling for dynamisk visning */
 .teller {
     width: 20%;
     display: flex;

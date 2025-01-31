@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Product } from "../types/products";
-import Navigeringsbanner from "../components/Navigeringsbanner";
-import logo from "../images/logo.jpg";
-import "./Produktside.css";
 import ProduktsideKnapperad from "../components/ProduktsideKnapperad";
+import Layout from "../Layout";
+import { Product } from "../types/products";
+import "./Produktside.css";
 
 export default function Produktside() {
     const { id } = useParams();
@@ -22,20 +21,18 @@ export default function Produktside() {
     }
 
     return (
-        <>
-            <img src={logo} className="logo" />
-            <Navigeringsbanner />
+        <Layout>
             <div className="produktside">
                 <img src={product.image} alt="Produktbilde" />
                 <div className="produktinfo">
                     <p>Kategori: {product.category}</p>
                     <h1>{product.title.toUpperCase()}</h1>
                     <p>Pris: {product.price}</p>
-                    <ProduktsideKnapperad />
+                    <ProduktsideKnapperad produktId={product.id} />
                     <h2>DETALJER</h2>
                     <p>{product.description}</p>
                 </div>
             </div>
-        </>
+        </Layout>
     );
 }

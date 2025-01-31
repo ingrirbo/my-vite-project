@@ -1,11 +1,9 @@
-import Navigeringsbanner from "../components/Navigeringsbanner";
-import logo from "../images/logo.jpg";
+import Layout from "../Layout";
 
 export default function Home() {
     return (
-        <>
-            <img src={logo} className="logo" />
-            <Navigeringsbanner />
-        </>
+        <Layout>
+            <h1>Home</h1>
+        </Layout>
     );
 }

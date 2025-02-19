@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Interior from "./pages/Interior";
 import Produktside from "./pages/Produktside";
+import Handlekurv from "./pages/Handlekurv";
 
 function App() {
     return (
@@ -11,6 +12,7 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/interior" element={<Interior />} />
                 <Route path="/produkt/:id" element={<Produktside />} />
+                <Route path="/handlekurv" element={<Handlekurv />} />
             </Routes>
         </BrowserRouter>
     );

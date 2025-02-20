@@ -4,7 +4,7 @@ import Layout from "../Layout";
 import { Product } from "../types/products";
 
 export default function Interior() {
-    const [products, setProducts] = useState<Product[]>([]);
+    const [products, setProducts] = useState<Product[] | undefined>(undefined);
 
     useEffect(() => {
         fetch("https://fakestoreapi.com/products/category/jewelery")
